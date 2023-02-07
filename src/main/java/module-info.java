@@ -9,4 +9,7 @@ module com.xingray.javafx.base {
     exports com.xingray.javafx.base.config;
     exports com.xingray.javafx.base.config.fieldconverters;
     exports com.xingray.javafx.base.page;
+    exports com.xingray.javafx.base.ui.list;
+    exports com.xingray.javafx.base.ui.view.interfaces;
+
 }
