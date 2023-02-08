@@ -4,6 +4,7 @@ module com.xingray.javafx.base {
     requires javafx.controls;
     requires com.xingray.java.config;
     requires com.xingray.java.util;
+    requires com.xingray.java.base;
 
     exports com.xingray.javafx.base;
     exports com.xingray.javafx.base.config;

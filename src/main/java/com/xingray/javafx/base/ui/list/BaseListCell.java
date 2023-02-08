@@ -8,12 +8,14 @@ import javafx.scene.control.ListCell;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.net.URL;
+import java.util.function.Function;
 
 public abstract class BaseListCell<T> extends ListCell<T> {
 
     private final Node root;
 
-    public BaseListCell() {
+    public BaseListCell(Function<String, URL> urlMapper) {
         LayoutPath layoutPathAnnotation = getClass().getAnnotation(LayoutPath.class);
         if (layoutPathAnnotation == null) {
             throw new IllegalStateException("must use with @LayoutPath");
@@ -27,7 +29,7 @@ public abstract class BaseListCell<T> extends ListCell<T> {
 
         }
         try {
-            root = new FXMLLoader().load(getClass().getResource(layoutPath));
+            root = new FXMLLoader().load(urlMapper.apply(layoutPath));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -13,6 +13,7 @@
 
         <java.version>17</java.version>
         <javafx.version>19.0.2.1</javafx.version>
+        <java-common.version>1.0.0</java-common.version>
     </properties>
 
     <dependencies>
@@ -30,13 +31,19 @@
         <dependency>
             <groupId>com.xingray</groupId>
             <artifactId>java-config</artifactId>
-            <version>1.0.0</version>
+            <version>${java-common.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.xingray</groupId>
             <artifactId>java-util</artifactId>
-            <version>1.0.0</version>
+            <version>${java-common.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xingray</groupId>
+            <artifactId>java-base</artifactId>
+            <version>${java-common.version}</version>
         </dependency>
     </dependencies>
 

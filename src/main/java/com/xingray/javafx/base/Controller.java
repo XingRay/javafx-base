@@ -124,6 +124,10 @@ public abstract class Controller {
         this.parent = parent;
     }
 
+    public Function<String, URL> getUrlMapper() {
+        return urlMapper;
+    }
+
     public void setUrlMapper(Function<String, URL> urlMapper) {
         this.urlMapper = urlMapper;
     }
